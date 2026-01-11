@@ -88,7 +88,6 @@ const PolicyHubPage = () => {
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold gradient-text">Policy & Governance Hub</h1>
                   <p className="text-gray-600 text-lg mt-1">Collaborative policy development and knowledge sharing</p>
-                </div>
               </div>
             </div>
             <div className="flex gap-3">
@@ -100,7 +99,6 @@ const PolicyHubPage = () => {
                 <Upload className="w-5 h-5" />
                 Upload Document
               </button>
-            </div>
           </div>
         </div>
 
@@ -111,7 +109,7 @@ const PolicyHubPage = () => {
               key={index}
               className="card group hover:scale-105 transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
-            ></div>
+            >
               <div className={`inline-flex p-2.5 rounded-xl bg-gradient-to-br ${stat.color} text-white mb-2 shadow-lg group-hover:rotate-6 transition-transform`}>
                 <stat.icon className="w-5 h-5" />
               </div>
@@ -170,7 +168,7 @@ const PolicyHubPage = () => {
             >
               {/* Featured Badge */}
               {doc.featured && (
-                <div className="absolute top-4 right-4 z-10"></div>
+                <div className="absolute top-4 right-4 z-10">
                   <div className="bg-gradient-to-r from-accent-500 to-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
                     <Star className="w-3 h-3 fill-current" />
                     Featured
@@ -198,7 +196,7 @@ const PolicyHubPage = () => {
                 </div>
 
                 {/* Meta Info */}
-                <div className="flex flex-wrap items-center gap-3 mb-4 text-sm"></div>
+                <div className="flex flex-wrap items-center gap-3 mb-4 text-sm">
                   <span className="inline-flex items-center gap-1 px-3 py-1 bg-primary-100 text-primary-700 rounded-full font-semibold">
                     {doc.category}
                   </span>
@@ -216,7 +214,7 @@ const PolicyHubPage = () => {
                 </div>
 
                 {/* Stats Row */}
-                <div className="flex items-center gap-6 mb-4 text-sm text-gray-600 pb-4 border-b border-gray-100"></div>
+                <div className="flex items-center gap-6 mb-4 text-sm text-gray-600 pb-4 border-b border-gray-100">
                   <div className="flex items-center gap-1.5">
                     <FileText className="w-4 h-4" />
                     <span className="font-semibold">{doc.pages}</span> pages
@@ -232,7 +230,7 @@ const PolicyHubPage = () => {
                 </div>
 
                 {/* Footer */}
-                <div className="flex items-center justify-between"></div>
+                <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-sm text-gray-500">
                     <Calendar className="w-4 h-4" />
                     <span>{doc.date}</span>
@@ -253,14 +251,8 @@ const PolicyHubPage = () => {
             </div>
           ))}
         </div>
-
-        {/* Load More */}
-        <div className="text-center mt-8">
-          <button className="bg-white hover:bg-gray-50 text-gray-700 font-semibold px-8 py-3 rounded-xl border-2 border-gray-200 transition-all hover:border-primary-500 hover:text-primary-600">
-            Load More Documents
-          </button>
-        </div>
       </div>
+    </div>
     </div>
   )
 }
