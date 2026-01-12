@@ -1,10 +1,10 @@
-import { DollarSign, TrendingUp, Heart, Target, Award, ArrowUpRight, CreditCard, Building2, Users2, Sparkles, CheckCircle, Eye, EyeOff, Calendar, TrendingDown, Wallet, Globe, Smartphone, PiggyBank, Shield, Star, Verified } from 'lucide-react'
+import { DollarSign, TrendingUp, Heart, Target, Award, ArrowUpRight, CreditCard, Building2, Users2, Sparkles, CheckCircle, Wallet, Smartphone, PiggyBank, Shield, Star, Verified, Globe } from 'lucide-react'
 import { useState } from 'react'
 
 const FundingPage = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState<'donate' | 'invest'>('donate')
-  const [showPassword, setShowPassword] = useState(false)
+
   const [donationFrequency, setDonationFrequency] = useState<'one-time' | 'monthly'>('one-time')
 
   const stats = [

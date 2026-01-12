@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Users, Clock, Tag, ArrowRight, Video, Globe, Plus, Filter, Heart, Share2, Star, TrendingUp, Target, Award } from 'lucide-react'
+import { Calendar, MapPin, Users, Clock, Tag, ArrowRight, Video, Globe, Plus, Filter, Heart, Share2, Star } from 'lucide-react'
 import { useState } from 'react'
 
 const EventsPage = () => {

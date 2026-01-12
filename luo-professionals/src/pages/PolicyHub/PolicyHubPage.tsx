@@ -1,10 +1,10 @@
-import { FileText, Download, Upload, Eye, Users, Calendar, TrendingUp, Filter, Search, Star, Lock, Share2, Heart, BookOpen, FolderOpen, Tag, ChevronDown, Edit, Trash2, ExternalLink, Clock, EyeOff, CheckCircle } from 'lucide-react'
+import { FileText, Download, Upload, Eye, Users, Calendar, TrendingUp, Filter, Search, Star, Lock, Share2, Heart, ChevronDown, ExternalLink, Clock } from 'lucide-react'
 import { useState } from 'react'
 
 const PolicyHubPage = () => {
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
-  const [sortOption, setSortOption] = useState('recent')
+  const [_sortOption, setSortOption] = useState('recent')
   const [showFilters, setShowFilters] = useState(false)
 
   const categories = [
@@ -136,12 +136,7 @@ const PolicyHubPage = () => {
     { label: 'This Month', value: '+8', icon: TrendingUp, color: 'from-orange-500 to-orange-600' },
   ]
 
-  const statusOptions = [
-    { id: 'all', label: 'All Status' },
-    { id: 'active', label: 'Active' },
-    { id: 'draft', label: 'Draft' },
-    { id: 'review', label: 'Under Review' },
-  ]
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary-50 pt-24 pb-12">

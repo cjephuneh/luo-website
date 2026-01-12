@@ -1,5 +1,5 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, AreaChart, Area, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
-import { Download, TrendingUp, Users, MapPin, Filter, Calendar, Eye, FileText, Activity, DownloadCloud, Share2, EyeOff, CheckCircle, Clock, Target, Award, Globe, Heart } from 'lucide-react'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, AreaChart, Area, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
+import { Download, TrendingUp, Users, MapPin, Filter, Calendar, Eye, FileText, Activity, DownloadCloud, Share2, Target} from 'lucide-react'
 import { useState } from 'react'
 
 const ReportsPage = () => {
@@ -127,7 +127,7 @@ const ReportsPage = () => {
     }
   ]
 
-  const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#64748b']
+
 
   const tabs = [
     { id: 'all', label: 'All Reports', count: 24 },

@@ -3,12 +3,14 @@ import { Menu, X, User, ChevronDown } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '@/store/hooks'
 import { logout } from '@/store/slices/authSlice'
+import type { RootState } from '@/store/index'
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [showUserMenu, setShowUserMenu] = useState(false)
-  const { isAuthenticated, user } = useAppSelector((state) => state.auth)
+  const { isAuthenticated, user } = useAppSelector((state: RootState) => state.auth)
   const dispatch = useAppDispatch()
   const location = useLocation()
 

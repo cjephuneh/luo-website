@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Users, TrendingUp, DollarSign, Briefcase, ArrowRight, Star, Award, Target, Heart, Building2, GraduationCap, Code, HeartHandshake, Globe, UsersRound } from 'lucide-react'
+import {  TrendingUp, DollarSign, Briefcase, ArrowRight, Star, Award, Target, Heart, Building2, GraduationCap, Code, HeartHandshake, UsersRound } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const HomePage = () => {

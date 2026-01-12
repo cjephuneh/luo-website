@@ -4,6 +4,7 @@ import { useAppDispatch } from '@/store/hooks'
 import { loginSuccess } from '@/store/slices/authSlice'
 import { Mail, Lock, LogIn, Sparkles, Eye, EyeOff } from 'lucide-react'
 
+
 const LoginPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')

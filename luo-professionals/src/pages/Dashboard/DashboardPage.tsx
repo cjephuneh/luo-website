@@ -1,8 +1,9 @@
 import { useAppSelector } from '@/store/hooks'
+import type { RootState } from '@/store/index'
 import { Users, Briefcase, Calendar, FileText, TrendingUp, Award, Bell, MapPin, Heart, Target, Activity } from 'lucide-react'
 
 const DashboardPage = () => {
-  const { user } = useAppSelector((state) => state.auth)
+  const { user } = useAppSelector((state: RootState) => state.auth)
 
   const stats = [
     { icon: Users, label: 'My Network', value: '234', color: 'from-blue-500 to-blue-600', trend: '+12%' },

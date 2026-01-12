@@ -1,4 +1,4 @@
-import { MessageSquare, ThumbsUp, Reply, TrendingUp, Plus, Search, Users, Heart, Share2, Filter, Tag, Clock, Eye, ChevronDown, Pin } from 'lucide-react'
+import { MessageSquare, Reply, Plus, Search, Heart, Share2, ChevronDown, Pin, TrendingUp, Eye } from 'lucide-react'
 import { useState } from 'react'
 
 const ForumsPage = () => {
