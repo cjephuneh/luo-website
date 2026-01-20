@@ -134,7 +134,33 @@ const RegisterPage = () => {
                     />
                   </div>
                   <div className="group">
-                    <label className="block text-sm font-semibold text-gray-700 mb-3">Sector</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-3">Professional Sector</label>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      {[
+                        { value: 'Healthcare', label: '🏥 Healthcare', desc: 'Doctors, Nurses, Medical Staff' },
+                        { value: 'Education', label: '📚 Education', desc: 'Teachers, Professors, Academics' },
+                        { value: 'Technology', label: '💻 Technology', desc: 'Developers, Engineers, IT' },
+                        { value: 'Business & Finance', label: '💼 Business', desc: 'Entrepreneurs, Financiers' },
+                        { value: 'Engineering', label: '🔧 Engineering', desc: 'Civil, Mechanical, Electrical' },
+                        { value: 'Law & Justice', label: '⚖️ Law', desc: 'Lawyers, Legal Practitioners' },
+                        { value: 'Media & Communications', label: '📢 Media', desc: 'Journalists, Communicators' },
+                        { value: 'Agriculture', label: '🌾 Agriculture', desc: 'Farmers, Agribusiness' }
+                      ].map((sector) => (
+                        <button
+                          key={sector.value}
+                          type="button"
+                          onClick={() => setFormData({...formData, sector: sector.value})}
+                          className={`p-4 rounded-xl border-2 transition-all text-left ${
+                            formData.sector === sector.value
+                              ? 'border-primary-500 bg-primary-50 shadow-lg'
+                              : 'border-gray-200 hover:border-primary-300 hover:bg-gray-50'
+                          }`}
+                        >
+                          <div className="font-semibold text-gray-800">{sector.label}</div>
+                          <div className="text-sm text-gray-600 mt-1">{sector.desc}</div>
+                        </button>
+                      ))}
+                    </div>
                     <select
                       name="sector"
                       value={formData.sector}
@@ -145,8 +171,12 @@ const RegisterPage = () => {
                       <option value="">Select your sector</option>
                       <option value="Healthcare">🏥 Healthcare</option>
                       <option value="Education">📚 Education</option>
-                      <option value="Business & Finance">💼 Business & Finance</option>
                       <option value="Technology">💻 Technology</option>
+                      <option value="Business & Finance">💼 Business & Finance</option>
+                      <option value="Engineering">🔧 Engineering</option>
+                      <option value="Law & Justice">⚖️ Law & Justice</option>
+                      <option value="Media & Communications">📢 Media & Communications</option>
+                      <option value="Agriculture">🌾 Agriculture</option>
                     </select>
                   </div>
                   <div className="group">

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, User, ChevronDown } from 'lucide-react'
+import { Menu, X, User, ChevronDown, MessageCircle, Phone } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '@/store/hooks'
 import { logout } from '@/store/slices/authSlice'
@@ -50,6 +50,18 @@ const Header = () => {
               Home
               {isActive('/') && <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent-500" />}
             </Link>
+            <Link to="/jobs" className={`relative hover:text-accent-500 transition-colors ${
+              isActive('/jobs') ? 'text-accent-500' : 'text-white'
+            }`}>
+              Jobs
+              {isActive('/jobs') && <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent-500" />}
+            </Link>
+            <Link to="/tenders" className={`relative hover:text-accent-500 transition-colors ${
+              isActive('/tenders') ? 'text-accent-500' : 'text-white'
+            }`}>
+              Tenders
+              {isActive('/tenders') && <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent-500" />}
+            </Link>
             <Link to="/events" className={`relative hover:text-accent-500 transition-colors ${
               isActive('/events') ? 'text-accent-500' : 'text-white'
             }`}>
@@ -86,6 +98,15 @@ const Header = () => {
                 }`}>
                   Policy Hub
                 </Link>
+                <a 
+                  href="https://chat.whatsapp.com/YOUR_GROUP_LINK" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-accent-500 transition-colors text-white"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp Group
+                </a>
                 <div className="relative">
                   <button 
                     onClick={() => setShowUserMenu(!showUserMenu)}
@@ -134,6 +155,8 @@ const Header = () => {
         {isOpen && (
           <div className="lg:hidden mt-4 space-y-2 animate-fade-in">
             <Link to="/" className="block py-2 hover:text-accent-500">Home</Link>
+            <Link to="/jobs" className="block py-2 hover:text-accent-500">Jobs</Link>
+            <Link to="/tenders" className="block py-2 hover:text-accent-500">Tenders</Link>
             <Link to="/events" className="block py-2 hover:text-accent-500">Events</Link>
             <Link to="/funding" className="block py-2 hover:text-accent-500">Funding</Link>
             <Link to="/reports" className="block py-2 hover:text-accent-500">Reports</Link>
@@ -142,6 +165,15 @@ const Header = () => {
                 <Link to="/dashboard" className="block py-2 hover:text-accent-500">Dashboard</Link>
                 <Link to="/forums" className="block py-2 hover:text-accent-500">Forums</Link>
                 <Link to="/policy-hub" className="block py-2 hover:text-accent-500">Policy Hub</Link>
+                <a 
+                  href="https://chat.whatsapp.com/YOUR_GROUP_LINK" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block py-2 hover:text-accent-500 flex items-center gap-2"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp Group
+                </a>
                 <button onClick={handleLogout} className="block w-full text-left py-2 hover:text-accent-500">
                   Logout
                 </button>

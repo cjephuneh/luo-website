@@ -9,6 +9,9 @@ import PolicyHubPage from './pages/PolicyHub/PolicyHubPage'
 import FundingPage from './pages/Funding/FundingPage'
 import EventsPage from './pages/Events/EventsPage'
 import ReportsPage from './pages/Reports/ReportsPage'
+import JobsPage from './pages/Jobs/JobsPage'
+import TendersPage from './pages/Tenders/TendersPage'
+import AttachmentsPage from './pages/Attachments/AttachmentsPage'
 import ProtectedRoute from './components/Auth/ProtectedRoute'
 
 function App() {
@@ -40,6 +43,13 @@ function App() {
         <Route path="funding" element={<FundingPage />} />
         <Route path="events" element={<EventsPage />} />
         <Route path="reports" element={<ReportsPage />} />
+        <Route path="jobs" element={<JobsPage />} />
+        <Route path="tenders" element={<TendersPage />} />
+        <Route path="attachments" element={
+          <ProtectedRoute>
+            <AttachmentsPage />
+          </ProtectedRoute>
+        } />
       </Route>
     </Routes>
   )
